@@ -39,6 +39,7 @@ export default function Modal({
           borderRadius: 8,
           padding: 24,
           maxWidth: "90vw",
+          color: "#222",
         }}
         onClick={e => e.stopPropagation()}
       >
