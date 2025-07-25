@@ -44,7 +44,7 @@ export function UserForm({ isOpen, onClose, onSubmit, initialData, mode }: UserF
     >
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-white/80 mb-1">
+          <label className="block text-sm font-medium text-gray-900/80 mb-1">
             ชื่อ-นามสกุล *
           </label>
           <input
@@ -53,13 +53,13 @@ export function UserForm({ isOpen, onClose, onSubmit, initialData, mode }: UserF
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="กรอกชื่อ-นามสกุล"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-white/80 mb-1">
+          <label className="block text-sm font-medium text-gray-900/80 mb-1">
             อีเมล *
           </label>
           <input
@@ -68,13 +68,13 @@ export function UserForm({ isOpen, onClose, onSubmit, initialData, mode }: UserF
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="กรอกที่อยู่อีเมล"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-white/80 mb-1">
+          <label className="block text-sm font-medium text-gray-900/80 mb-1">
             บทบาท *
           </label>
           <select
@@ -82,7 +82,7 @@ export function UserForm({ isOpen, onClose, onSubmit, initialData, mode }: UserF
             value={formData.role}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="employee">พนักงาน</option>
             <option value="manager">ผู้จัดการ</option>
@@ -91,7 +91,7 @@ export function UserForm({ isOpen, onClose, onSubmit, initialData, mode }: UserF
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-white/80 mb-1">
+          <label className="block text-sm font-medium text-gray-900/80 mb-1">
             แผนก *
           </label>
           <input
@@ -100,13 +100,13 @@ export function UserForm({ isOpen, onClose, onSubmit, initialData, mode }: UserF
             value={formData.department}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="กรอกแผนก"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-white/80 mb-1">
+          <label className="block text-sm font-medium text-gray-900/80 mb-1">
             URL รูปโปรไฟล์
           </label>
           <input
@@ -114,7 +114,7 @@ export function UserForm({ isOpen, onClose, onSubmit, initialData, mode }: UserF
             name="avatar"
             value={formData.avatar}
             onChange={handleChange}
-            className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="กรอก URL รูปโปรไฟล์"
           />
         </div>
@@ -125,9 +125,9 @@ export function UserForm({ isOpen, onClose, onSubmit, initialData, mode }: UserF
             name="isActive"
             checked={formData.isActive}
             onChange={handleChange}
-            className="rounded border-white/20 bg-white/10 text-blue-500 focus:ring-blue-500"
+            className="rounded border-gray-300 bg-white text-blue-500 focus:ring-blue-500"
           />
-          <label className="text-sm text-white/80">ผู้ใช้สามารถใช้งานได้</label>
+          <label className="text-sm text-gray-900/80">ผู้ใช้สามารถใช้งานได้</label>
         </div>
 
         <div className="flex space-x-3 pt-4">

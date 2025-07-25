@@ -4,6 +4,7 @@ import BudgetRequestForm from './BudgetRequestForm';
 import { BudgetRequestCard } from './BudgetRequestCard';
 import { BudgetRequestDetails } from './BudgetRequestDetails';
 import { Button } from '../UI/Button';
+import Modal from '../UI/Modal';
 import { Card } from '../UI/Card';
 import { Plus, Search, Filter } from 'lucide-react';
 import { BudgetRequest } from '../../lib/supabase';

@@ -80,7 +80,7 @@ export function MaterialForm({ isOpen, onClose, onSubmit, initialData, mode, isS
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-white/80 mb-1">
+              <label className="block text-sm font-medium text-gray-900/80 mb-1">
                 ชื่อวัสดุ *
               </label>
               <input
@@ -89,13 +89,13 @@ export function MaterialForm({ isOpen, onClose, onSubmit, initialData, mode, isS
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="กรอกชื่อวัสดุ"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-white/80 mb-1">
+              <label className="block text-sm font-medium text-gray-900/80 mb-1">
                 รหัสวัสดุ
               </label>
               <input
@@ -103,13 +103,13 @@ export function MaterialForm({ isOpen, onClose, onSubmit, initialData, mode, isS
                 name="material_code"
                 value={formData.material_code}
                 onChange={handleChange}
-                className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="กรอกรหัสวัสดุ"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-white/80 mb-1">
+              <label className="block text-sm font-medium text-gray-900/80 mb-1">
                 บาร์โค้ด
               </label>
               <div className="flex space-x-2">
@@ -118,7 +118,7 @@ export function MaterialForm({ isOpen, onClose, onSubmit, initialData, mode, isS
                   name="barcode"
                   value={formData.barcode}
                   onChange={handleChange}
-                  className="flex-1 px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="flex-1 px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="กรอกหรือสแกนบาร์โค้ด"
                 />
                 <Button
@@ -132,7 +132,7 @@ export function MaterialForm({ isOpen, onClose, onSubmit, initialData, mode, isS
               </div>
             </div>
           <div>
-            <label className="block text-sm font-medium text-white/80 mb-1">
+            <label className="block text-sm font-medium text-gray-900/80 mb-1">
               หมวดหมู่ *
             </label>
             <select
@@ -140,7 +140,7 @@ export function MaterialForm({ isOpen, onClose, onSubmit, initialData, mode, isS
               value={formData.category}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="">เลือกหมวดหมู่</option>
               <option value="วัสดุสำนักงาน">วัสดุสำนักงาน</option>
@@ -149,7 +149,7 @@ export function MaterialForm({ isOpen, onClose, onSubmit, initialData, mode, isS
           </div>
 
           <div className="md:col-span-2">
-            <label className="block text-sm font-medium text-white/80 mb-1">
+            <label className="block text-sm font-medium text-gray-900/80 mb-1">
               รายละเอียด
             </label>
             <textarea
@@ -157,13 +157,13 @@ export function MaterialForm({ isOpen, onClose, onSubmit, initialData, mode, isS
               value={formData.note}
               onChange={handleChange}
               rows={3}
-              className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="กรอกรายละเอียดวัสดุ"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-white/80 mb-1">
+            <label className="block text-sm font-medium text-gray-900/80 mb-1">
               หน่วย *
             </label>
             <input
@@ -172,13 +172,13 @@ export function MaterialForm({ isOpen, onClose, onSubmit, initialData, mode, isS
               value={formData.unit}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="เช่น ชิ้น, กิโลกรัม, ลิตร"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-white/80 mb-1">
+            <label className="block text-sm font-medium text-gray-900/80 mb-1">
               สต็อกเริ่มต้น *
             </label>
             <input
@@ -188,13 +188,13 @@ export function MaterialForm({ isOpen, onClose, onSubmit, initialData, mode, isS
               onChange={handleChange}
               required
               min="0"
-              className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="กรอกจำนวนสต็อกเริ่มต้น"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-white/80 mb-1">
+            <label className="block text-sm font-medium text-gray-900/80 mb-1">
               สต็อกปัจจุบัน *
             </label>
             <input
@@ -204,13 +204,13 @@ export function MaterialForm({ isOpen, onClose, onSubmit, initialData, mode, isS
               onChange={handleChange}
               required
               min="0"
-              className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="กรอกจำนวนสต็อกปัจจุบัน"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-white/80 mb-1">
+            <label className="block text-sm font-medium text-gray-900/80 mb-1">
               ระดับสต็อกขั้นต่ำ *
             </label>
             <input
@@ -220,13 +220,13 @@ export function MaterialForm({ isOpen, onClose, onSubmit, initialData, mode, isS
               onChange={handleChange}
               required
               min="0"
-              className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="กรอกระดับสต็อกขั้นต่ำ"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-white/80 mb-1">
+            <label className="block text-sm font-medium text-gray-900/80 mb-1">
               ราคาต่อหน่วย *
             </label>
             <input
@@ -237,13 +237,13 @@ export function MaterialForm({ isOpen, onClose, onSubmit, initialData, mode, isS
               required
               min="0"
               step="0.01"
-              className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="กรอกราคาต่อหน่วย"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-white/80 mb-1">
+            <label className="block text-sm font-medium text-gray-900/80 mb-1">
               ตำแหน่งจัดเก็บ
             </label>
             <input
@@ -251,13 +251,13 @@ export function MaterialForm({ isOpen, onClose, onSubmit, initialData, mode, isS
               name="location"
               value={formData.location}
               onChange={handleChange}
-              className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="กรอกตำแหน่งจัดเก็บ"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-white/80 mb-1">
+            <label className="block text-sm font-medium text-gray-900/80 mb-1">
               วันหมดอายุ
               {formData.category === 'ยา' && <span className="text-red-400"> *</span>}
             </label>
@@ -267,10 +267,10 @@ export function MaterialForm({ isOpen, onClose, onSubmit, initialData, mode, isS
               value={formData.expiry_date}
               onChange={handleChange}
               required={formData.category === 'ยา'}
-              className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             {formData.category === 'ยา' && (
-              <p className="text-white/60 text-xs mt-1">
+              <p className="text-gray-900/60 text-xs mt-1">
                 * จำเป็นต้องระบุวันหมดอายุสำหรับยา
               </p>
             )}

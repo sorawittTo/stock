@@ -120,7 +120,7 @@ export function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
           {/* Basic Information */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-white/80 mb-1">
+              <label className="block text-sm font-medium text-gray-900/80 mb-1">
                 Department *
               </label>
               <input
@@ -128,18 +128,18 @@ export function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
                 value={formData.department}
                 onChange={(e) => setFormData(prev => ({ ...prev, department: e.target.value }))}
                 required
-                className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-white/80 mb-1">
+              <label className="block text-sm font-medium text-gray-900/80 mb-1">
                 Urgency Level *
               </label>
               <select
                 value={formData.urgencyLevel}
                 onChange={(e) => setFormData(prev => ({ ...prev, urgencyLevel: e.target.value as any }))}
-                className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
@@ -149,19 +149,19 @@ export function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-white/80 mb-1">
+              <label className="block text-sm font-medium text-gray-900/80 mb-1">
                 Expected Date
               </label>
               <input
                 type="date"
                 value={formData.expectedDate}
                 onChange={(e) => setFormData(prev => ({ ...prev, expectedDate: e.target.value }))}
-                className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-white/80 mb-1">
+              <label className="block text-sm font-medium text-gray-900/80 mb-1">
                 Reason for Request *
               </label>
               <input
@@ -170,7 +170,7 @@ export function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
                 onChange={(e) => setFormData(prev => ({ ...prev, reason: e.target.value }))}
                 required
                 placeholder="Brief reason for this request"
-                className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
           </div>
@@ -178,7 +178,7 @@ export function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
           {/* Add Materials Section */}
           <div>
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-semibold text-white">Request Items</h3>
+              <h3 className="text-lg font-semibold text-gray-900">Request Items</h3>
               <div className="flex space-x-2">
                 <Button
                   type="button"
@@ -207,9 +207,9 @@ export function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
                 <Card key={item.materialId} className="p-4">
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
-                      <h4 className="text-white font-medium">{item.material.name}</h4>
-                      <p className="text-white/60 text-sm">{item.material.category}</p>
-                      <p className="text-white/80 text-sm">
+                      <h4 className="text-gray-900 font-medium">{item.material.name}</h4>
+                      <p className="text-gray-900/60 text-sm">{item.material.category}</p>
+                      <p className="text-gray-900/80 text-sm">
                         ₿{item.material.pricePerUnit} per {item.material.unit}
                       </p>
                     </div>
@@ -223,7 +223,7 @@ export function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
                         >
                           <Minus className="w-4 h-4" />
                         </Button>
-                        <span className="text-white font-medium w-12 text-center">
+                        <span className="text-gray-900 font-medium w-12 text-center">
                           {item.requestedQuantity}
                         </span>
                         <Button
@@ -236,7 +236,7 @@ export function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
                         </Button>
                       </div>
                       <div className="text-right">
-                        <p className="text-white font-medium">
+                        <p className="text-gray-900 font-medium">
                           ₿{(item.requestedQuantity * item.material.pricePerUnit).toLocaleString()}
                         </p>
                       </div>
@@ -255,7 +255,7 @@ export function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
 
               {selectedItems.length === 0 && (
                 <Card className="p-8 text-center">
-                  <p className="text-white/60">No items added yet. Click "Add Item" or "Scan" to add materials.</p>
+                  <p className="text-gray-900/60">No items added yet. Click "Add Item" or "Scan" to add materials.</p>
                 </Card>
               )}
             </div>
@@ -264,7 +264,7 @@ export function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
             {selectedItems.length > 0 && (
               <Card className="p-4 mt-4 bg-blue-500/10 border-blue-500/30">
                 <div className="flex justify-between items-center">
-                  <span className="text-white font-medium">Total Request Value:</span>
+                  <span className="text-gray-900 font-medium">Total Request Value:</span>
                   <span className="text-blue-400 font-bold text-lg">₿{totalValue.toLocaleString()}</span>
                 </div>
               </Card>
@@ -273,14 +273,14 @@ export function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
 
           {/* Notes */}
           <div>
-            <label className="block text-sm font-medium text-white/80 mb-1">
+            <label className="block text-sm font-medium text-gray-900/80 mb-1">
               Additional Notes
             </label>
             <textarea
               value={formData.notes}
               onChange={(e) => setFormData(prev => ({ ...prev, notes: e.target.value }))}
               rows={3}
-              className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Any additional information or special instructions"
             />
           </div>
@@ -306,13 +306,13 @@ export function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
       >
         <div className="space-y-4">
           <div className="relative">
-            <Search className="w-5 h-5 text-white/60 absolute left-3 top-1/2 transform -translate-y-1/2" />
+            <Search className="w-5 h-5 text-gray-900/60 absolute left-3 top-1/2 transform -translate-y-1/2" />
             <input
               type="text"
               placeholder="Search materials..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full pl-10 pr-4 py-2 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -325,9 +325,9 @@ export function RequestForm({ isOpen, onClose, onSubmit }: RequestFormProps) {
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <h4 className="text-white font-medium">{material.name}</h4>
-                    <p className="text-white/60 text-sm">{material.category}</p>
-                    <p className="text-white/80 text-sm">
+                    <h4 className="text-gray-900 font-medium">{material.name}</h4>
+                    <p className="text-gray-900/60 text-sm">{material.category}</p>
+                    <p className="text-gray-900/80 text-sm">
                       Stock: {material.stockQuantity} {material.unit} | ₿{material.pricePerUnit}
                     </p>
                   </div>
